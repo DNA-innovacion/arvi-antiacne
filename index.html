@@ -1,3 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+  
+<!-- Import the component -->
+<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+
+<!-- Use it like any other HTML element -->
+<!-- use unique asset to ensure lazy loading -->
+<model-viewer id="lazy-load" camera-controls reveal="interaction" src="./antiacne.glb" alt="">
+  <div id="lazy-load-poster" slot="poster"></div>
+  <div id="button-load" slot="poster">Cargar modelo 3D</div>
+</model-viewer>
+    
+</body>
+
+</html>
+
 <style>
   #lazy-load-poster {
     position: absolute;
@@ -11,7 +37,6 @@
     background-position: center;
   }
   #button-load {
-    background-image: url("../../assets/ic_get_app_white_24dp.svg");
     background-repeat: no-repeat;
     background-size: 24px 24px;
     background-position: 6% 50%;
@@ -34,8 +59,4 @@
      height: 600px;
   }
 </style>
-<!-- use unique asset to ensure lazy loading -->
-<model-viewer id="lazy-load" camera-controls reveal="interaction" src="./antiacne.glb" alt="">
-  <div id="lazy-load-poster" slot="poster"></div>
-  <div id="button-load" slot="poster">Cargar modelo 3D</div>
-</model-viewer>
+
